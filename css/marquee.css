@@ -1,0 +1,200 @@
+:root{
+  --yellow : #FEDA00;
+  --gray : #231F20;
+}
+
+/* CUSTOM LOGO SLIDER */
+
+.logo-slider-section{
+  width: 100%;
+  height: auto;
+  padding: 50px 0;
+}
+.logos, .logos-rev{
+  overflow: hidden;
+  background-color: #fff;
+  white-space: nowrap;
+}
+
+.logos:hover .logo-slider, .logos-rev:hover .logo-slider-rev{
+   animation-play-state: paused;
+}
+.logo-slider img:hover, .logo-slider-rev img:hover{
+  animation-play-state: paused;
+   cursor: pointer;
+   filter: grayscale(0);
+}
+
+.logo-slider{
+  display: inline-block;
+  animation: 30s slide infinite linear;
+}
+
+.logo-slider-rev{
+  display: inline-block;
+  animation: 30s slide-rev infinite linear;
+}
+
+.logo-slider img, .logo-slider-rev img{
+  width: 200px;
+  margin: 0 10px;
+  filter: grayscale(1);
+}
+@keyframes slide {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-rev {
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo-slider img, .logo-slider-rev img{
+    width: 120px;
+  }
+  .feedback-wrapper{
+    width: 100%;
+  }
+  .feedback-button-next,
+  .feedback-button-prev,
+  .feedback-pagination{
+    display: none;
+  }
+}
+
+
+  /* feedback JS CSS */
+
+   
+    .feedback {
+      max-width: 650px;
+      margin: 40px auto;
+      height: 300px;
+      border-radius: 20px;
+    }
+
+    
+    .feedback-slide{
+      background-color: transparent;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 100px;
+      text-align: center;
+    }
+    .feedback-pagination{
+      color: red;
+    }
+    .feedback-slide .feedback-text h6{
+      font-size: 15px;
+      font-style: italic;
+      text-align: center;
+    }
+    /* 
+    .feedback-slide .feedback-img{
+      width: 80px; height: 80px;
+      border: 1px solid #000;
+      border-radius: 100px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+    .feedback-slide .feedback-img img{
+      width: 100%;
+    }
+    .feedback-slide .feedback-text{
+      padding: 20px 40px;
+    }
+    */
+    /* .feedback-slide .feedback-text p::before{
+      content: '“';
+      position: absolute;
+      top: -120px;
+      left: -30px;
+      font-size: 180px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #eaeaea;
+      z-index: -1;
+    }
+    .feedback-slide .feedback-text p::after{
+      content: '”';
+      position: absolute;
+      bottom: -220px;
+      right: -30px;
+      font-size: 180px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #eaeaea;
+      z-index: -1;
+
+    } */
+    
+
+/*
+====================================================================
+		Testimonial Section
+====================================================================
+
+***/
+
+.testimonial-section {
+  position: relative;
+  padding-top: 80px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-section:before {
+  position: absolute;
+  left: -200px;
+  top: 22%;
+  background-image: url(http://t.commonsupport.com/adro/images/icons/ring-circle.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 701px;
+  height: 756px;
+  content: "";
+  animation: fa-spin 25s infinite alternate;
+}
+.sec-title {
+  position: relative; text-align: center;
+}
+.sec-title .title {
+  margin-bottom: 20px;
+  
+}
+@media only screen and (max-width: 767px) {
+  .sec-title {
+    margin-bottom: 50px;
+  }
+  .feedback{
+    width: 350px;
+  }
+}
+@keyframes fa-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#txt-hide{
+visibility: hidden;
+}
+.txt-show{
+  visibility: visible;
+}

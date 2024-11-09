@@ -1,0 +1,193 @@
+:root{
+    --yellow : #FEDA00;
+    --gray : #231F20;
+  }
+
+.career-header{
+    width: 100%;
+    height: auto;
+    /* background-color: rgb(236, 236, 236); */
+    background-color: #fff;
+}
+.career-area{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.career-content, .career-img{
+    width: 100%;
+}
+.career-content p{
+    text-align: justify;
+}
+
+.career-area .career-img img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.job-section{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background-color: #ececec;;
+}
+.job-section .job-area{
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: auto;
+    padding: 50px 0;
+}
+
+
+.job-section .job-area .job-card {
+    max-width: 100%;
+    max-height: 350px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe,
+                  -20px -20px 60px #ffffff;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+   }
+.job-section .job-area .job-card h3{
+    font-size: 18px;
+    padding-left: 10px;
+}
+.job-section .job-area .job-card li{
+    font-size: 13px;
+}
+.job-section .job-area .job-card button{
+    width: 150px;
+    height: 35px;
+    background-color: #000;
+    color: var(--yellow);
+    border-radius: 20px 20px 0 20px;
+    border: none;
+    transition: .2s ease-in-out;
+}
+
+
+/* =========== CAREER POPUP FORM CSS ========== */
+.career-popup{
+    width: 420px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 6px;
+    position: fixed;
+    top: 0; left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    z-index: 9999;
+}
+.career-popup form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+.career-popup form .input{
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #eeeeee;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.career-popup form .input:focus{
+    outline: none;
+    transition: transform 0.4s, top 0.4s;
+}
+.radio-btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px auto;
+}
+.radio-btn span{
+    flex: 1;
+}
+.radio-btn label{
+    flex: 1;
+    font-size: 15px;
+}
+
+.open-career-popup{
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+
+
+.career-popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+.career-popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background-color: var(--yellow);
+    color: #000;
+    border: 0;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+.career-popup .closeTimes{
+    color:#333;
+    font-size: 45px;
+    position: absolute;
+    top: -10px; right: 10px;
+
+}
+
+   @media screen and (max-width : 768px) {
+    .career-area{
+        flex-direction: column;
+    }
+    
+    .job-section .job-area{
+        width: 95%;
+        grid-template-columns: auto;
+    }
+    .job-section .job-area .job-card{
+        align-items: flex-start;
+    }
+    .open-career-popup{
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        visibility: visible;
+    }
+   }
+

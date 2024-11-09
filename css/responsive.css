@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cairo:wght@200..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+/* RESPONSIVE - MEDIA QUERY STARTS HERE */
+/* 320px, 768px, and 1200px */
+@media screen and (max-width : 768px)
+{
+    .head{
+        width: 100%;
+        overflow-x: hidden;
+        .black-box{
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+            gap: 20px;
+            h1{
+                text-align: center;
+                font-size: 80px;
+            }
+        }
+    }
+    .about-section h3{
+        text-align: left;
+    }
+    
+
+    .service-section{
+        background-color: #fff;
+    }
+    
+    .col:nth-last-child(1){
+        position: relative;
+        top: 0px;
+    }
+
+    
+
+    /* Timeline Process Area Start */
+    
+    .timeline{
+        width: 90%;
+        overflow-x: hidden;
+        margin: auto;
+    }
+    .line {
+        left: 5%;
+    }
+    .timeline-box {
+        width: 90%;
+        left: 40px;
+        margin: 50px 0;
+        .content{
+            padding: 0;
+        }
+        h2{
+            font-size: 23px;
+        }
+        p{
+            text-align: justify;
+        }
+    }
+    .timeline-box:nth-child(odd) {
+        justify-content: flex-start;
+        left: 40px;
+    }
+    
+    .timeline-box:nth-child(odd)::after {
+        left: -30px;
+        clip-path: polygon(100% 0, 100% 100%, 0 50%);
+    }
+    /* Timeline Process Area Start */
+
+    .work-area{
+        flex-direction: column;
+    }
+
+    .mission-area{
+        display: flex;
+        flex-direction: column;
+    }
+
+/* Client Logo Section */
+.marquee--8 {
+    --marquee-item-width: 100px;
+    --marquee-item-height: 50px;
+    --marquee-duration: 10s;
+    --marquee-items: 8;
+    }
+
+      
+.logo-area{
+    width: 100%;
+    height: auto;
+}
+.logo-area img{
+    width: 200px;
+}
+
+/* Client Logo Section */
+
+
+    .footer-area{
+        flex-direction: column;
+    }
+
+    .footer-bottom{
+        flex-direction: column;
+        gap: 20px 0;
+    }
+
+
+    /* Popup Box CSS Responsive */
+
+    .query-popup{
+        width: 90%;
+        height: auto;
+        
+    }
+    .open-popup{
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        visibility: visible;
+    }
+
+    /* ABOUT US PAGE RESPONSIVE */
+    .slide2{
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    .slide2-img img{
+        max-width: 60%;
+    }
+
+    /* ====== ABOUT US SECTION RESPONSIVE START ====== */
+    .company-section .company-area h1{
+        font-size: 48px;
+        line-height: 1em;
+    }
+    .approach-mission, .our-ceo, .our-md, .our-cmo{
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .approach, .mission, .our-ceo, .our-md, .our-cmo{
+        padding: 20px;
+    }
+    
+    .our-md{
+        flex-direction: column-reverse;
+        background-color: #eeeeee;
+    }
+
+    .team-gosparrow{
+        width: 100%;
+        height: auto;
+        grid-template-columns: auto auto;
+        row-gap: 60px; column-gap: 80px;
+        place-items: center;
+        margin: auto;
+        text-align: center;
+    }
+    .team-card {
+        max-width: 120px;
+        height: 200px;
+        padding: 3px;
+        background: #ffffff;
+        text-align: center;
+    }
+    
+    /* ====== ABOUT US SECTION RESPONSIVE END ====== */
+
+    /* ====== SERVICES SECTION RESPONSIVE START ====== */
+    .service-area{
+        width: 90%;
+        flex-direction: column;
+    }
+    .service-img img{
+        max-width: 100%;
+        max-height: 280px;
+    }
+    .service-content h2{
+        text-align: left;
+        font-size: 30px;
+        padding-top: 15px;
+    }
+    .service-content #mob-content{
+        display: none;
+    }
+    #service-mob-map{
+        display: none;
+    }
+    .service-odd{
+        flex-direction: column-reverse;
+    }
+    
+    /* ====== SERVICES SECTION RESPONSIVE END ====== */
+
+}
+
+

@@ -1,0 +1,151 @@
+:root{
+    --yellow : #FEDA00;
+    --gray : #231F20;
+    --offwhite : #ececec;
+  }
+
+.service-section{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--offwhite);
+    padding: 0;
+}
+
+.service-header-content{
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    h1{
+        margin-bottom: 40px;
+        font-size: 65px;
+    }
+    p{
+        text-align: justify;
+    }
+}
+.service-header-img{
+    width: 100%;
+    height: 100%;
+    /* background-color: #3d3d3dee;  Dark Gray Color */ 
+    background-color: var(--yellow);
+    padding: 50px;
+}
+.service-header-img img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* services section */
+
+.service-category{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.service{
+    width: 100%;
+    height: auto;
+}
+.service-heading{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px;
+}
+
+.service-heading img{
+    max-width: 100px;
+    height: auto;
+}
+.service-title h5{
+    width: 100%;
+    color: var(--gray);
+    font-size: 30px;
+}
+
+.accordion-header{
+    border: 2px solid var(--offwhite);
+    background-color: transparent;
+    margin: 10px;
+}
+.accordion-button{
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.accordion-button:hover{
+    background-color: var(--yellow);
+}
+
+.accordion-button:focus,
+.accordion-button:focus-visible {
+    box-shadow: none; /* Remove the outline */
+    outline: none;    /* Remove the outline */
+    border-color: transparent; /* Optional: remove border color */
+    background-color: transparent;
+}
+.accordion-button:not(.collapsed) {
+    background-color: transparent;  /* Removes the light sky background */
+    color: inherit;  /* Keeps the text color as default */
+    border-color: transparent;  /* Optional: Removes the border color */
+}
+
+
+
+
+
+/* Ensure the accordion-body has a fixed width and word wrap */
+.accordion-body {
+    width: 100%;              /* Use full width of parent container */
+    max-width: 100%;           /* Ensure it doesn't go beyond 100% width */
+    word-wrap: break-word;     /* Break long words into the next line */
+    overflow-wrap: break-word; /* Alternative for older browsers */
+}
+
+/* Optionally, you can enforce a max-width for the entire accordion */
+.accordion {
+    max-width: 600px; /* Set a fixed or maximum width for the accordion, adjust as needed */
+    margin: 0 auto;   /* Center the accordion within its container */
+}
+
+/* Fix accordion-item width */
+.accordion-item {
+    width: 100%;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width : 768px) {
+    .service-section{
+        flex-direction: column-reverse;
+    }
+    
+    .service-category{
+        flex-direction: column;
+   }
+   .service-header-content{
+    padding: 50px 10px;
+    border: 1px solid red;
+}
+   .service-heading{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 30px 0;
+    }
+    
+}
